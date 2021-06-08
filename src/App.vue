@@ -39,7 +39,7 @@ body {
 .nav ul li a {
   display: flex;
   justify-content: flex-start;
-  font-size: 25px;
+  font-size: 27px;
   text-decoration: none;
   color:white;
  }
@@ -50,7 +50,7 @@ body {
 }
 
 .nav > ul > li > a > button {
-  font-size: 20px;
+  font-size: 21px;
   width: 90%;
   height: 4rem;
   background-color: black;
@@ -71,7 +71,7 @@ body {
   color:#bcbcbc;
   display: flex;
   justify-content: center;
-  font-size: 19px;
+  font-size: 20px;
   text-decoration: none;
   margin-left: -1%;
   margin-top:7%;
