@@ -1,88 +1,203 @@
 <template>
-  <div id="app">
-    <div class="nav">
-       <ul style="list-style-type: none">
-         <li> <a href="#"><button><i class="fas fa-home"></i> Home</button></a></li>
-         <li> <a href="#"><button><i class="fal fa-search"></i> Search</button></a></li>
-         <li> <a href="#"><button><i class="fad fa-books"></i> Library</button></a></li>
-       </ul>
-      <div class="çizgi"></div>
-      <div class="box">
-        <a href="#"><i style="color: white" class="fas fa-plus"></i>&#160;Create Playlist</a>
-        <a id="a" href="#"><i style="color: white" class="fas fa-heart"></i>&#160;Liked Songs</a>
+  <div class="home">
+    <div class="go">
+      <div class="back">
+        <a href="#"><i class="fas fa-angle-left"></i></a>
+      </div>
+      <div class="forward">
+        <a href="#"><i class="fas fa-angle-right"></i></a>
       </div>
     </div>
-    <router-view/>
+    <div class="account">
+      <p>Forcex</p>
+     <div class="avatar-box">
+       <div class="avatar"><img width="28px" src="../assets/logo.png"></div>
+     </div>
+    </div>
+    <div class="body">
+      <b>Made for Forcex
+      </b>
+      <p>Get better recommendations the more you listen.
+      </p>
+    </div>
+    <div class="music-box">
+        <div v-for="item in musics" :key="item" class="music">
+          <div class="music-image">
+            <img :src="item.image">
+          </div>
+          <div style="margin-top: 2%" class="çizgi"></div>
+          <h3>{{ item.name}}</h3>
+          <p class="author">{{item.author}}</p>
+        </div>
+    </div>
   </div>
 </template>
 
-<style>
-body {
-  color: white;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif;
+<script>
+export default {
+  data() {
+    return {
+      musics: [
+        {
+          name: "Wondress",
+          image: "https://cdn.discordapp.com/attachments/824240985320062996/851838153966223360/iu.png",
+          author: "Forcex"
+        },
+        {
+          name: "Forcex",
+          image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.prO6dWvomYyK1881o-qn6wHaEK%26pid%3DApi&f=1",
+          author: "Bille Ellish"
+        },
+        {
+          name: "BibPob",
+          image: "https://cdn.discordapp.com/attachments/824240985320062996/851838153966223360/iu.png",
+          author: "NoName"
+        },
+        {
+          name: "Biliyom",
+          image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.prO6dWvomYyK1881o-qn6wHaEK%26pid%3DApi&f=1",
+          author: "Enes Batur"
+        },
+        {
+          name: "NoName",
+          image: "https://cdn.discordapp.com/attachments/824240985320062996/851839151652864000/iu.png",
+          author: "No Name"
+        }
+      ]
+    }
+  }
 }
-
-.çizgi {
-  border-bottom: 1px solid #1f1e1e;
-}
-
-.nav {
-  top: 0;
-  width: 14em;
-  height: 100%;
-  position: fixed;
-  background-color: black;
-}
-
-.nav ul li a {
-  display: flex;
-  justify-content: flex-start;
-  font-size: 27px;
-  text-decoration: none;
-  color:white;
+</script>
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200&display=swap');
+ .go {
+   width: 2.6rem;
+   height: 2.4rem;
+   background-color: black;
+   margin-left: 19%;
+   margin-top: 1%;
+   border-radius: 30px;
  }
 
-.nav ul  {
-  margin-left: -23%;
-  margin-top: 50%;
+ .go > .back > a {
+   text-decoration: none;
+   color: #bcbcbc;
+   font-size: 34px;
+   display: flex;
+   justify-content: center;
+   transition: color 0.7s;
+ }
+
+ .go > .back > a >i  {
+   margin-top: 9% !important;
+ }
+
+ .go > .back > a:hover {
+   color:white;
+ }
+
+.forward > a {
+   border-radius: 30px;
+   background-color: black;
+   text-decoration: none;
+   color: #bcbcbc;
+   font-size: 33px;
+   display: flex;
+   justify-content: center;
+   transition: color 0.7s;
+   margin-top: 19%;
+ }
+
+.forward > a > i {
+   margin-top: 7% !important;
+ }
+
+ .forward > a:hover {
+   color:white;
+ }
+
+ .account {
+   width: 8.7rem;
+   height: 2.2rem;
+   background-color: #000000;
+   margin-left: 87%;
+   margin-top: -3%;
+   border-radius: 30px;
+ }
+
+ .account > p {
+   text-align: center;
+   padding: 7px 60px;
+   font-size: 18px;
+ }
+
+ .avatar-box {
+   margin-top: -37.6%;
+   margin-left: 2%;
+   width: 2.4rem;
+   height: 2.0rem;
+   border-radius: 50px;
+   background-color: #292727;
+ }
+
+ .avatar > img{
+   margin-top: 8%;
+   margin-left: 15%;
+ }
+
+ .body {
+   margin-left: 18%;
+   margin-top: 7%;
+ }
+
+ .body > b {
+   font-size: 30px;
+ }
+
+ .body > p {
+   font-size: 17px;
+   font-family: 'Source Sans Pro', sans-serif;
+   margin-top: 0%;
+ }
+
+ .music-box {
+   margin-left: 18%;
+   margin-top: 2%;
+ }
+
+ .music-box > .music {
+   width: 12rem;
+   height: 16rem;
+   background-color: black;
+   display: inline-block;
+   margin: 1%;
+   border-radius: 3px;
+ }
+
+ .music > h3 {
+   margin-left:6%;
+   margin-top: 9%;
+   font-size: 18px;
+ }
+
+.music:hover {
+  transition: 0.7s;
+  transform: translate(-0%,-3%);
 }
 
-.nav > ul > li > a > button {
-  font-size: 21px;
-  width: 90%;
-  height: 4rem;
-  background-color: black;
-  border: none;
-  color:#bcbcbc;
-  transition: color 0.8s;
-}
-.nav > ul > li > a > button:hover {
-  color:white;
-}
-.nav > ul > li > a > button:focus {
-  background-color: #2d2b2b;
-  border-radius: 3%;
-  color:white;
+.music-image {
+  margin-left: 8.7%;
+  margin-top: 6%;
 }
 
-.box a {
-  color:#bcbcbc;
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  text-decoration: none;
-  margin-left: -1%;
-  margin-top:7%;
-  transition: color 0.8s;
+.music-image > img {
+  border-radius: 3px;
+  width: 160px;
+  height: 140px;
 }
 
-#a {
-  margin-left: -8%;
+.author {
+  margin-left: 6% !important;
+  font-size: 14px;
 }
-
-.box a:hover {
-  color:white;
-}
-</style>a
+</style>
