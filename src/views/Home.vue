@@ -134,7 +134,7 @@ export default {
  .avatar-box {
    margin-top: -37.6%;
    margin-left: 2%;
-   width: 2.6rem;
+   width: 2.4rem;
    height: 2.0rem;
    border-radius: 50px;
    background-color: #292727;
