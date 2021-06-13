@@ -29,4 +29,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 ![image](https://user-images.githubusercontent.com/68302451/121218440-68408400-c88b-11eb-8375-20a7b3b71b0f.png)
 
 
-<a href="https://discord.gg/GQQ9xRGB">Serendia Squad</a> |  My Account: Forcex#0001
+<a href="https://discord.gg/GQQ9xRGB">Serendia Squad</a> |  My Account: Forcex#2673
